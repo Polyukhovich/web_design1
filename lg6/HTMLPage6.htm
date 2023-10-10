@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Andriy Polyukhovich</title>
+    <style>
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #a6e0d4;
+            color: #5f6967;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        h3 {
+            font-size: 30px;
+            text-align: right;
+        }
+
+        p {
+            font-size: 2vw;
+            margin: 0;
+        }
+
+
+        .link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .table {
+            background-color: #0d318c;
+            color: #0d0900;
+        }
+
+        .info-box {
+            width: 100%;
+            background-color: indigo;
+            text-align: center;
+        }
+
+        .info-text {
+            color: aqua;
+            font-size: 21px;
+            padding: 11px;
+            font-family: Arial;
+        }
+
+        .link-text {
+            color: blueviolet;
+            font-size: 19px;
+            padding: 11px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            background-color: cornflowerblue;
+        }
+
+        .description {
+            font-size: 19px;
+            font-family: Bahnschrif;
+            margin: 0;
+        }
+
+        mark {
+            background-color: var(--accent);
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        ins {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid var(--primary);
+            margin: 2vw 0;
+        }
+
+        blockquote {
+            border: 4px solid #b2c454;
+            max-width: 50%;
+            overflow: hidden;
+            background-color: #085d6e;
+            color: #dfe7e8;
+            margin-left: auto;
+        }
+            blockquote img {
+                width: 50%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            blockquote p {
+                margin: 0;
+            }
+
+            blockquote cite {
+                font-style: italic;
+            }
+
+        h2 {
+            font-size: 15px;
+            margin: 2vw 0;
+        }
+
+        .artwork-form textarea,
+        .tools-form textarea {
+            width: 35%;
+        }
+
+        .artwork-form input[type="submit"],
+        .tools-form input[type="submit"],
+        .languages-form input[type="submit"],
+        .music-form input[type="submit"],
+        .animation-form input[type="submit"],
+        .travel-form input[type="submit"],
+        .address {
+            margin-top: 1.5vw;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .image-container img {
+                width: 55%;
+                height: auto;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Andriy Polyukhovych</h1>
+        <nav class="link-text">
+
+            |<a href="https://t.me/chumba_loon">Telegram</a>|
+            <a href="https://twitter.com/PoluhovicAndrij">X (Twitter)</a> |
+            <a href="https://www.instagram.com/chumba_loon">Instagram</a> |
+            <a href="https://github.com/Polyukhovich">GitHub</a> |
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvqrtBFkKFDCrfQgqHbwhTBvzkNMQmJtzLRfXGLqnrhSzWdpRmLkxqzWxhBshNnxbMNNHL">My Gmail</a>|
+        </nav>
+        <h2>About me:</h2>
+        <ul class="header">
+            <li>18 y. o.</li>
+            <li>Date of birth - 14.12.2004</li>
+            <li>Lover of music and drawing.</li>
+        </ul>
+        <div class="info-box">
+            <p class="info-text">I study at KNU</p>
+        </div>
+
+        <p class="description">I like to <mark>draw</mark>.</p>
+        <p class="header"><em>Music</em> is a source of inspiration that unleashes my imagination and prompts me to create ideas for <i><ins>photos and drawings.</ins></i></p>
+        <hr>
+        <h3>My work:</h3>
+        <div class="image-container">
+            <blockquote>
+                <img src="skull.jpg" alt="Roses and hidden variability ">
+                <p><cite>Roses and hidden variability </cite>by Andriy Polyukhovich. Photo engraved in 2022 </p>
+            </blockquote>
+            <blockquote>
+                <img src="girl.jpeg" alt="Inspiration in the forest ">
+                <p><cite>Inspiration in the forest </cite>by Andriy Polyukhovich. Photo engraved in 2022 </p>
+            </blockquote>
+        </div>
+        <h2>Your Artwork Description</h2>
+        <form class="artwork-form" action="/action_page.php">
+            <textarea name="artwork-description" rows="10" cols="30">
+                Here can be your description of artwork or colors)))
+            </textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Choose Your Creative Tools</h2>
+        <form class="tools-form" action="/action_page.php">
+            <input type="checkbox" id="canvas" name="canvas" value="Canvas">
+            <label for="canvas">Canvas</label><br>
+            <input type="checkbox" id="watercolors" name="watercolors" value="Watercolors">
+            <label for="watercolors">Watercolors</label><br>
+            <input type="checkbox" id="acrylics" name="acrylics" value="Acrylics">
+            <label for="acrylics">Acrylics</label><br>
+            <input type="checkbox" id="sketchbook" name="sketchbook" value="Sketchbook">
+            <label for="sketchbook">Sketchbook</label><br>
+            <input type="checkbox" id="digital" name="digital" value="Digital">
+            <label for="digital">Digital</label><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr />
+        <pre>
+            The letters are here
+            here
+            here
+        <del>here </del>
+        <b>pooop!</b>
+            here
+            and here too
+        </pre>
+        <table class="table" border="1">
+            <caption>Here is my schedule from Monday to Friday:</caption>
+            <tr>
+                <th>Pair:</th>
+                <td>first pair</td>
+                <td>second pair</td>
+                <td>third pair</td>
+            </tr>
+            <tr>
+                <th>Time: </th>
+                <td>9:00-10:20</td>
+                <td>10:30-11:50</td>
+                <td>12:10-13:30</td>
+            </tr>
+            <tr>
+                <th>Rest time (in minutes)</th>
+                <td>10</td>
+                <td>10</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <h2>What is your favorite programming language:</h2>
+        <form class="languages-form">
+            <label for="artist">Favorite Artist:</label><br>
+            <input type="text" id="artist" name="artist" value="Leonardo da Vinci" /><br>
+            <label for="work">Favorite Artwork:</label><br>
+            <input type="text" id="work" name="work" value="Mona Lisa" /><br>
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+        <h2>Favorite Music Genre</h2>
+        <form class="music-form">
+            <p>Choose your favorite music genre:</p>
+            <input type="radio" id="rock" name="fav_genre" value="Rock">
+            <label for="rock">Rock</label><br>
+            <input type="radio" id="pop" name="fav_genre" value="Pop">
+            <label for="pop">Pop</label><br>
+            <input type="radio" id="hiphop" name="fav_genre" value="HipHop">
+            <label for="hiphop">Hip-Hop</label><br>
+            <input type="radio" id="jazz" name="fav_genre" value="Jazz">
+            <label for="jazz">Jazz</label><br>
+            <input type="submit" value="Submit" />
+        </form>
+        <h2>Choose Your Animation Style</h2>
+        <form class="animation-form" action="/action_page.php">
+            <label for="animation">Choose an animation style:</label>
+            <select id="animation" name="animation">
+                <option value="2d">2D Animation</option>
+                <option value="3d">3D Animation</option>
+                <option value="stop-motion">Stop Motion</option>
+                <option value="claymation">Claymation</option>
+                <option value="computer-generated">Computer-Generated</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+        <hr />
+        <h2>What is needed for studying online in the winter:</h2>
+        <ol>
+            <li>Power bank</li>
+            <li>Rechargeable lamps</li>
+            <li>A laptop with a large battery capacity</li>
+        </ol>
+        <h2>Travel Preferences</h2>
+        <form class="travel-form" action="/action_page.php">
+            <fieldset>
+                <legend>Your Travel Information:</legend>
+                <label for="destination">Destination:</label><br>
+                <input type="text" id="destination" name="destination" value="Tokyo"><br>
+
+                <label for="departure">Departure Date:</label><br>
+                <input type="date" id="departure" name="departure" value="2023-10-01"><br>
+
+                <label for="duration">Duration (in days):</label><br>
+                <input type="number" id="duration" name="duration" value="13"><br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br />
+        <br />
+        <address class="address">12 Naberezhna Street, Svarytsevychi, 34120</address>
+    </div>
+</body>
+
+</html>
