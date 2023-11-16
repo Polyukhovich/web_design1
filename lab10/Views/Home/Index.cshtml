@@ -1,0 +1,26 @@
+﻿﻿@{
+    ViewData["Title"] = "Книжковий Магазин";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Книги:</h1>
+</div>
+<table>
+    <tr>
+        <th><p>Назва книги</p></th>
+        <th><p>Автор</p></th>
+        <th><p>Ціна</p></th>
+        <th><p></p></th>
+    </tr>
+    @{
+        foreach (var b in ViewBag.Books)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Author</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купити</a></p></td>
+            </tr>
+        }
+    }
+</table>
