@@ -1,0 +1,46 @@
+﻿﻿@{
+    ViewData["Title"] = "Магазин Електроніки";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Електроніка:</h1>
+</div>
+
+<table>
+    <tr>
+        <th><p>Назва техніки</p></th>
+        <th><p>Тип</p></th>
+        <th><p>Дата виходу</p></th>
+        <th><p>Ціна</p></th>
+        <th><p></p></th>
+    </tr>
+    @{
+        foreach (var b in ViewBag.Machinery)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Сategory</p></td>
+                <td><p>@b.Date</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купити</a></p></td>
+            </tr>
+        }
+    }
+</table>
