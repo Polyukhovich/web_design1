@@ -1,0 +1,53 @@
+﻿@model List<Device>
+@{
+    ViewData["Title"] = "Магазин Електроніки";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Електроніка:</h1>
+</div>
+
+<table>
+    <tr>
+        <th><p>Назва техніки</p></th>
+        <th><p>Тип</p></th>
+        <th><p>Дата виходу</p></th>
+        <th><p>Виробник </p></th>
+        <th><p>Спецалізація  </p></th>
+        <th><p>Інформація про виробника </p></th>
+        <th><p>Ціна</p></th>
+        <th><p></p></th>
+    </tr>
+    @{
+        foreach (var device in Model)
+        {
+            <tr>
+                <td><p>@device.Name</p></td>
+                <td><p>@device.Сategory</p></td>
+                <td><p>@device.Date</p></td>
+                <td>@(device.Parameter?.Name)</td>
+                <td>@(device.Parameter?.Category)</td>
+                <td>@(device.Parameter?.Description)</td>
+                <td><p>@device.Price</p></td>
+                <td><p><a href="/Home/Buy/@device.Id">Купити</a></p></td>
+            </tr>
+        }
+    }
+</table>
