@@ -1,0 +1,62 @@
+﻿@model Electronick.Models.Device
+
+@{
+    ViewData["Title"] = "DeleteDevice";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Сategory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Сategory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Parameter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Parameter.Category)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteDevice" method="post">
+        <div class="form-group">
+            <label asp-for="Id">Select Device to Delete:</label>
+            <select asp-for="Id" class="form-control">
+                @if (ViewBag.Devices != null)
+                {
+                    @foreach (var device in ViewBag.Devices)
+                    {
+                        <option value="@device.Id">@device.Name</option>
+                    }
+                }
+            </select>
+        </div>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

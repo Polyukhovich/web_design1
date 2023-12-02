@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="Width=device-width" />
+    <title>Купівля</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформлення купівлі </h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+            <table>
+                <tr>
+                    <td><p>Введіть своє ім'я</p> </td>
+                    <td><input type="text" name="Person" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введіть адресу</p> </td>
+                    <td><input type="text" name="Address" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Підтвертити" /> </td>
+                    <a asp-action="Index" asp-text>Назад на головну </a>
+
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
