@@ -1,0 +1,69 @@
+﻿@using Electronick.ViewModels
+
+@model List<DeviceViewModel>
+@{
+    ViewData["Title"] = "Магазин Електроніки";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Електроніка:</h1>
+</div>
+
+<table>
+    <tr>
+        <th><p>Назва техніки</p></th>
+        <th><p>Тип</p></th>
+        <th><p>Характеристики</p></th>
+        <th><p>Гарантія </p></th>
+        <th><p>Дата виходу</p></th>
+        <th><p>Виробник </p></th>
+        <th><p>Спецалізація  </p></th>
+        <th><p>Інформація про виробника </p></th>
+        <th><p>Ціна(грн)</p></th>
+        <th><p>Дії</p></th>
+    </tr>
+    @foreach (var device in Model)
+    {
+        <tr>
+            <td><p>@device.Name</p></td>
+            <td><p>@device.NameCategory</p> </td>
+            <td><p>@device.spacifications</p></td>
+            <td><p>@device.waranty</p></td>
+            <td><p>@device.Date</p></td>
+            <td><p>@device.NameCompany</p></td>
+            <td><p>@device.CategoryCompany</p></td>
+            <td><p>@device.Description</p></td>
+            <td><p>@device.Price</p></td>
+            <td>
+                <p>
+                    |
+                    <a href="/Home/Buy/@device.Id">Купити</a>
+                    |
+                    <a href="/Home/EditDevice/@device.Id">Редагувати девайс </a>
+                    |
+                    <a href="/Home/EditParameter/@device.ParameterId">Редагувати виробника </a>
+                    |
+                    <a href="/Home/EditCategory/@device.CategoryId">Редагувати категорію </a>
+                    |
+                </p>
+            </td>
+        </tr>
+    }
+</table>

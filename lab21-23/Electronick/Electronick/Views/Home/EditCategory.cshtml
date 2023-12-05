@@ -1,0 +1,44 @@
+﻿@model Electronick.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "EditCategory";
+}
+
+<h1>EditCategory</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCategory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NameCategory" class="control-label"></label>
+                <input asp-for="NameCategory" class="form-control" />
+                <span asp-validation-for="NameCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spacifications" class="control-label"></label>
+                <textarea asp-for="spacifications" class="form-control" class="form-control" rows="15" style="width: 300px;"></textarea>
+                <span asp-validation-for="spacifications" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="waranty" class="control-label"></label>
+                <input asp-for="waranty" class="form-control" />
+                <span asp-validation-for="waranty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
